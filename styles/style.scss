@@ -120,6 +120,7 @@ body {
       text-align: center;
       padding: 2.5em;
       margin: 0;
+      color: #444444;
     }
     .features {
       display: grid;
@@ -127,6 +128,7 @@ body {
       grid-template-rows: auto auto;
       grid-gap: 2em;
       row-gap: 120px;
+      color: #444444;
       .feature {
         display: grid;
         grid-template-columns: 110px auto;
