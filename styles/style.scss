@@ -3,12 +3,12 @@ $jumbo-color: #383838;
 $secondary-color: #bebebe;
 $top-space: 65px;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   header {
     color: white;
     position: relative;
@@ -52,14 +52,12 @@ body {
           a {
             font-size: 1.05em;
             padding-bottom: 5px;
-            text-decoration: none;
-            color: white;
           }
           a.active {
-            border-bottom: 2px solid #00c4e4;
+            border-bottom: 1px solid #00c4e4;
           }
           a:hover {
-            border-bottom: 2px solid #00c4e4;
+            border-bottom: 1px solid #00c4e4;
             cursor: pointer;
           }
         }
@@ -72,7 +70,7 @@ body {
       padding-left: 17.5%;
       padding-right: 17.5%;
       margin: 0 auto;
-      background: url("../assets/bild4_ljus.jpg");
+      background: url('../assets/bild4_ljus.jpg');
       grid-template-columns: 1fr 1fr;
     }
     .friImg {
@@ -129,10 +127,12 @@ body {
       row-gap: 120px;
       .feature {
         display: grid;
-        grid-template-columns: 110px auto;
+        grid-template-columns: 95px auto;
         grid-gap: 1em;
-        img {
-          width: 100%;
+        .featImg {
+          height: 120px;
+          border: 1px solid grey;
+          width: 95px;
         }
         p {
           margin-top: 0.4em;
