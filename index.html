@@ -67,7 +67,79 @@
         </div>
       </div>
     </main>
-    <div class="secondaryContent">1</div>
+    <div class="secondaryContent">
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="./assets/slidebild1.png" style="width:100%;" />
+          <div class="faq" style="height: 79%">
+            <p class="q">
+              How do I connect SmartFridge with my local grocery store?
+            </p>
+            <p class="a">
+              -Register your SmartFridge on our site and then connect it via one
+              of our collaboration companies applications/websites.
+            </p>
+            <p class="q">Warranty - how long?</p>
+            <p class="a">-The warranty for SmartFridge is 5 years.</p>
+            <p class="q">What is the delivery time of SmartFridge?</p>
+            <p class="a">
+              -We're shipping worldwide and delivery time is 7-21 working days
+              depending on where you live.
+            </p>
+          </div>
+        </div>
+
+        <div class="mySlides1" style="height: 90%;">
+          <img src="./assets/slidebild2.png" style="width:100%" />
+          <div class="faq">
+            <p class="q">
+              When I order groceries, do I collect them at the store or do I get
+              them delivered?
+            </p>
+            <p class="a">
+              -You can either pick up the groceries at the store or have them
+              delivered home for a small fee.
+            </p>
+            <p class="q">How do I register?</p>
+            <p class="a">
+              -You register simply by clicking the "register/sign up" button and
+              then by following the steps.
+            </p>
+            <p class="q">Which companies do you collaborate with?</p>
+            <p class="a">
+              -We collaborate with Ica, Willys and Coop so far, we're looking to
+              add even more companies in the future.
+            </p>
+          </div>
+        </div>
+
+        <div class="mySlides1">
+          <img src="./assets/slidebild3.png" style="width:100%" />
+          <div class="faq">
+            <p class="q">How does SmartFridge know what items I have stored?</p>
+            <p class="a">
+              -SmartFridge has a built-in item barcode scanner that scans items
+              with a barcode. Items without barcodes, like fruits, can be put in
+              manually.
+            </p>
+            <p class="q">How does SmartFridge come up with meal suggestions?</p>
+            <p class="a">
+              -Based on the items that's scanned and put in manually,
+              SmartFridge then brings you suggestions of meals to cook from our
+              collaborators databases.
+            </p>
+            <p class="q">
+              If you couldn't find the question and answer you were looking for,
+              feel free to contact us and we'll do our best to solve your
+              problem!
+            </p>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+    </div>
     <footer>
       <div class="footCol">
         <h1>CONTACT</h1>
@@ -100,5 +172,29 @@
       </div>
       <p>© Copyright 2019 The Fridge Company. All rights reserved</p>
     </footer>
+    <script>
+      var slideIndex = [1, 1]
+      var slideId = ['mySlides1']
+      showSlides(1, 0)
+
+      function plusSlides(n, no) {
+        showSlides((slideIndex[no] += n), no)
+      }
+
+      function showSlides(n, no) {
+        var i
+        var x = document.getElementsByClassName(slideId[no])
+        if (n > x.length) {
+          slideIndex[no] = 1
+        }
+        if (n < 1) {
+          slideIndex[no] = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = 'none'
+        }
+        x[slideIndex[no] - 1].style.display = 'block'
+      }
+    </script>
   </body>
 </html>
